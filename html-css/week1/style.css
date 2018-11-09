@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    border: 20px solid rgb(248, 139, 76);
+    height: 1098px;
+    width: 100% auto;
+    font-family: sans-serif;
+}
+.header{
+    background: #666;
+    height: 145px;
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.header .name{
+    font-size: 50px;
+}
+nav{
+    background: rgba(192, 191, 191, 0.404);
+    width: 30%;
+    float: left;
+    padding: 25px;  
+}
+.italicsize{
+    font-weight: 100;
+    margin-bottom: 17px;
+}
+nav ul li{
+    list-style-type: none;
+    font-weight: bold;
+    text-align: center;
+ 
+}
+.contact{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.my_pic{
+    height: 190px;
+    width: 180px;
+    border-radius: 90px;
+    margin-top: -120px;
+    margin-bottom: 30px;
+}
+.skills{
+     font-size: 20px;
+     margin-top: 60px;
+}
+
+article{
+    content: "";
+    width: 70%;
+    float: left;
+    padding: 20px;
+   
+}
+.wrapper {
+    width: 100px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    padding: 3px;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .2);
+}
+
+.progress-bar-fill {
+    display: block;
+    height: 10px;
+    background-color: #36404e;
+    border-radius: 3px;
+    
+    transition: width 400ms ease-in-out;
+}
+
+
+.objective,.education{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.edu{
+    font-weight: bold;
+}
+.interest{
+    height: 2.5em;
+   
+}
+.icon{
+    height: 2em;
+    display: inline;
+}
+.paragraph{
+    margin-left: 60px;
+}
+a:link{
+    color: #36404e;
+}
