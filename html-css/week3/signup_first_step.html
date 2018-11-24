@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Boogaloo" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="row_nav">
+                <ul class="main-nav">
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Home</a></li>
+                </ul>
+                <div class="logo">
+                    <img src="log.jpg" alt="" class="logo" />
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="row_main">
+                <div class="signup-info">
+                    
+                    <div class="txt">
+                        <div>
+                        <h2 >Sign up to SHABAG.com</h2>
+                        <p>We can’t wait to help you improve your life-style and gain the attention from people around
+                                you!</p>
+                        <p>Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy
+                                picking the best offers that match your preferences and style. Every week we will send you a
+                                hand-picked selection - we just need to know a few details about your first...</p>
+                        <h3>Step 1/4 - tell us who you are?</h3>
+                        <div class="progress-bar">
+                                <span class="progress-bar-fill" style="width: 20%;"></span>
+                            </div>
+                    </div>
+                   <div class="container">
+                        <p>Nice to meet you. Let’s spend a minute to get to know each other? Please enter the following:</p>
+                    <form method="POST" action="signup_second_step.html">
+                     <div class="row">
+                      <div class="col-15">
+                      <label for="name">Name*</label>
+                      </div>
+                      <div class="col-35">
+                      <input type="text" name="name" required >
+                     </div>
+                     <div class="col-15">
+                      <label for="lastname">Last name*</label>
+                     </div>
+                     <div class="col-35">
+                      <input type="text" name="lastname" required >
+                    </div>
+                   </div> 
+                   <div class="row">
+                       <div class="col-15">
+                         <label for="country">Country*</label>
+                       </div>
+                       <div class="col-35">
+                         <select required>
+                             <option value=""></option>
+                             <option value="Danmark">Denmark</option>
+                             <option value="Danmark">Denmark</option>
+                         </select>
+                       </div>
+                    
+                   </div>
+                   
+                   <div class="row">
+                    <div class="col-15">
+                    <label for="street">Street Addres*</label>
+                    </div>
+                    <div class="col-35">
+                    <input type="text" name="name" required >
+                   </div>
+                   <div class="col-15">
+                    <label for="postcode">Postcode*</label>
+                   </div>
+                   <div class="col-35">
+                    <input type="text" name="postcode" required maxlength="4" >
+                  </div>
+                 </div> 
+                 <div class="row">
+                    <div class="col-15">
+                    <label for="profileDescription" id="hideme3">Profile description  <span id="dec-txt"> Please provide a short
+                        description of yourself to be
+                        displayed on our social
+                        community pages.</span></label>
+                    </div>
+                    <div class="col-85">
+                    <textarea name="profileDescription" rows="11" cols="1" id="hideme2" maxlength="500"></textarea>
+                   </div>  
+                 </div> 
+                 <span>Use the same address for billing and shipping? Uncheck below to fill out a separate shipping address.</span>
+                 <div class="row"><div class="row">
+                    <div class="col-15">
+                    <label for="shippingAddress" >Shipping Address</label>
+                    </div>
+                    <div class="col-35">
+                    <input type="checkbox" name="ship-chk" class="ship-chk" id="myCheck" onclick="myFunction()" required>
+                   </div>
+                   
+                   
+                 </div> 
+                    
+                    
+                   
+                   <div class="col-50">
+                    <input type="submit" name="submit" id="hideme" >
+                  </div>
+                 </div> 
+                 <div class="container" id="text" style="display:none">
+                 <div class="row">
+                    <div class="col-15">
+                    <label for="name">Name*</label>
+                    </div>
+                    <div class="col-35">
+                    <input type="text" name="name" required >
+                   </div>
+                   <div class="col-15">
+                    <label for="lastname">Last name*</label>
+                   </div>
+                   <div class="col-35">
+                    <input type="text" name="lastname" required >
+                  </div>
+                 </div> 
+                 <div class="row">
+                     <div class="col-15">
+                       <label for="country">Country*</label>
+                     </div>
+                     <div class="col-35">
+                       <select required>
+                           <option value=""></option>
+                           <option value="Danmark">Denmark</option>
+                           <option value="Danmark">Denmark</option>
+                       </select>
+                     </div>
+                  
+                 </div>
+                 
+                 <div class="row">
+                  <div class="col-15">
+                  <label for="street">Street Addres*</label>
+                  </div>
+                  <div class="col-35">
+                  <input type="text" name="street" required >
+                 </div>
+                 <div class="col-15">
+                  <label for="postcode">Postcode*</label>
+                 </div>
+                 <div class="col-35">
+                    <input type="text" name="postcode" required maxlength="4" >
+                </div>
+               </div> 
+               <div class="row">
+                  <div class="col-15">
+                  <label for="profileDescription">Profile description  <span id="dec-txt"> Please provide a short
+                      description of yourself to be
+                      displayed on our social
+                      community pages.</span></label>
+                  </div>
+                  <div class="col-85">
+                  <textarea name="profileDescription" rows="11" cols="1" maxlength="500"></textarea>
+                 </div>  
+               </div> 
+              
+                  
+                 
+                 
+                 <div class="col-50">
+                  <input type="submit" name="submit" >
+                </div>
+            </div>
+               </div> 
+                    </form>
+                   </div>
+                   
+                </div>
+                <!--
+            </div>
+                <img src="images/bg2.jpeg" alt="shopping" class="pic"/>
+            </div>-->
+        </main>
+        <!--
+        <footer>
+            <div class="footer-row">
+               <div class="payment"><span>PAYMENT INFO</span>
+                <ul class="pay-img">      
+                <li ><a href="#" ><img src="visa-48.png"/></a></li>
+                <li><a href="#" ><img src="images/mastercard-48.png" /></a></li>
+                <li><a href="#" ><img src="images/paypal-3-64.png" /></a></li>
+               </ul> 
+               </div>
+                <div class="links">
+                    <ul>
+                        <img  src="" alt/>
+                    </ul>
+                </div>
+               </div>
+            </div>
+        </footer>
+     -->
+     <script>
+     function myFunction() {
+  var checkBox = document.getElementById("myCheck");
+  var text = document.getElementById("text");
+  if (checkBox.checked == true){
+    text.style.display = "block";
+    hideme.style.display = "none";
+    hideme2.style.display = "none";
+    hideme3.style.display = "none";
+    
+  } else {
+    text.style.display = "none";
+  }
+}
+
+     </script>
+    </body>
+</html>
