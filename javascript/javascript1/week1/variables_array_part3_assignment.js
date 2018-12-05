@@ -25,6 +25,29 @@
    myFavoriteAnimals.push("baby pig");
  // to log that
    console.log(myFavoriteAnimals);
+
+// Here starts the working with strings
+
+   let myString = "this is a test";
+
+ //to show the lenght of array
+   myString.length;
+   console.log(myString.length);
+
+ //Working with variable types
+
+   let name = "Sheila" //string
+   let num = 122; //number
+   let sports = ["baskateball", "football", "vollyball"]; //array
+   const pi = 3.14; //const and float number
+
+ // to shows ǘaraibles
+   console.log("the value for the name variable is : " + name);
+   console.log("the value for the num variable is : " + num);
+   console.log("the value for the sports variable is : " + sports);
+   console.log("the value for the pi variable is : " + pi);
 	
+
+
 
 
