@@ -49,5 +49,8 @@
 	
 
 
+ //Working with typeof
 
-
+   console.log("typeof operator returns the data type of its operand in the form of a string. Operand can be any object, function or variable");
+   let age = 23;
+   console.log(typeof age);
