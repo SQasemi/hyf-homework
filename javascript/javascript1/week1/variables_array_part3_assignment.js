@@ -31,8 +31,8 @@
    let myString = "this is a test";
 
  //to show the lenght of array
-   myString.length;
-   console.log(myString.length);
+  stringLenght=  myString.length;
+   console.log(stringLenght);
 
  //Working with variable types
 
