@@ -42,3 +42,9 @@ for(let i = 0; i < notes.length; i++)
 }
 }
 showAllNotes();
+
+
+
+//unique feature
+My idea is working with font size of note and text color of note. That is important to have different font size
+and color. And another idea which I have it is adding record feature into note.  
