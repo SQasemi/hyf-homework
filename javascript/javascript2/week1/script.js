@@ -9,7 +9,7 @@ button.addEventListener("click", function(){
 	//console.log(randomItem);
 
     let spiritAnimalArea = document.getElementById("spiritAnimal");
-    spiritAnimalArea.innerHTML = textFeild + "-" + spritiAnimalArray[randomItem];
+    spiritAnimalArea.innerHTML = textFeild + " - " + spritiAnimalArray[randomItem];
     
 });
 
