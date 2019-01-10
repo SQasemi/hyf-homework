@@ -1,7 +1,7 @@
 //to click button
 let button = document.getElementById("displaySpriritAnimal");
 button.addEventListener("click", function(){
-	let textFeild = document.getElementById("animal").value;
+	let textFeild = document.getElementById("name").value;
 	//alert (animal);
 
 	//to create random Items
