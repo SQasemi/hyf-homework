@@ -7,4 +7,5 @@ function threeFive(startIndex, stopIndex){
     }
     return numArray;
 };
+//example
 console.log(threeFive(10,15));
