@@ -16,14 +16,13 @@ let threeFive = function (startIndex, stopIndex, threeCallback, fiveCallback){
 };
 
 //to calculate the divisible by three
-let sayThree = function(){
+function sayThree(){
  return (numArray[i] % 3 === 0);
 }
 
 //to calculate divisible by five
-let sayFive = function(){
+function sayFive(){
     return (numArray[i] % 5 ===0)
 }
 //example
 console.log(threeFive(10,15,sayThree,sayFive));
-//console.log(threeFive(sayThree,sayFive));
