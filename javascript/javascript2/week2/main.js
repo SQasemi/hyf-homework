@@ -1,28 +1,46 @@
 
+
 let numArray = [];
+let divisibleByThree = [];
+let divisibleByFive = [];
 let i;
-let threeFive = function (startIndex, stopIndex, threeCallback, fiveCallback){
-   
-    //iterate by using for loop
-    for( i = startIndex; i <= stopIndex; i++ ){
-        if(threeCallback && fiveCallback){
-            sayThree();
-            sayFive();
-        }
-        numArray.push(i);    
-       
-    }
-    return numArray;
-};
+//function to check if numbers divide by 3
+function sayThree( dividByThree ){
+  
+  if(dividByThree % 3 == 0)
+ {  
+   divisibleByThree.push(dividByThree)
+   console.log(divisibleByThree); 
+ }
+ else
+ {
+     console.log("nothing divisible by three");
+ }
+  
+}
+//function to check if numbers divide by 5
+function sayFive( dividByFive ){
+    if(dividByFive % 5 == 0)
+   {
+     divisibleByFive.push(dividByFive)
+     console.log(divisibleByFive); 
+   }
+   else
+   {
+       console.log("nothing divisible by Five");
+   }
+    
+  }
 
-//to calculate the divisible by three
-function sayThree(){
- return (numArray[i] % 3 === 0);
+  //callback function 
+function threeFive(startIndex, stopIndex, threeCallback, fiveCallBack){
+for( i = startIndex; i<= stopIndex; i++){
+    numArray.push(i);    
+}
+threeCallback();
+fiveCallBack();
+return numArray;
 }
 
-//to calculate divisible by five
-function sayFive(){
-    return (numArray[i] % 5 ===0)
-}
-//example
-console.log(threeFive(10,15,sayThree,sayFive));
+//to call callback function
+console.log(threeFive(10, 15, sayThree,sayFive));
