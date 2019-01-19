@@ -2,15 +2,32 @@
 <html>
     <head>
         <title></title>
+        <style>
+        #map{
+        height: 100%;
+        color: rgb(240, 11, 11);
+        }
+        
+        </style>
     </head>
     <body>
      <button id="btn-click">click me</button>
-     
+    
      <!-- to create an input to take number -->
      <form>
          <input type="number" id="input-number" />
      </form>
 
-     <script src="step_2.js" type="text/javascript"></script>   
+
+
+      <!-- <button id="show-location">show location</button> -->
+      <p><button onclick="" id="show-location">Show my location</button></p>
+      <div id="area"></div>
+      
+      <div id="map">map </div>
+     <script src="step_2.js" type="text/javascript"></script> 
+     <script src="step2_4.js" type="text/javascript"></script>  
+     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+     async defer></script>     
     </body>
 </html>
