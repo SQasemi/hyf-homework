@@ -22,7 +22,7 @@ let books = ["romeo_and_juliet",
             }
 
             
-            //2: or to display array
+            //2: oto display array
            //	console.log(books);
            
                          
@@ -30,7 +30,7 @@ let books = ["romeo_and_juliet",
            function bookList(){
             let bookItems = document.createElement("ul");
             document.body.appendChild(bookItems);
-             for (var i = 0; i <books.length; i++) {
+             for (let i = 0; i <books.length; i++) {
               let booklists = document.createElement("li");
               let showBookInList = document.createTextNode(books[i]);
               booklists.appendChild(showBookInList);
@@ -39,4 +39,6 @@ let books = ["romeo_and_juliet",
              }
                                              
            }
-    bookList();
+            bookList();
+           
+          

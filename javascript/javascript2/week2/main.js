@@ -42,11 +42,55 @@ for( i = startIndex; i<= stopIndex; i++){
 console.log(numArray);
 }
 
-
 //to call callback function
 threeFive(10, 15, sayThree,sayFive);
 
 
 
 
+// let numArray = [];
+// let divisibleByThree = [];
+// let divisibleByFive = [];
+// let i;
+// //function to check if numbers divide by 3
+// function sayThree( currentNumber){
+// {
+//    if(currentNumber %3 === 0 ){
 
+//        console.log(currentNumber);
+//        divisibleByThree.push(currentNumber);
+//       }
+
+
+// // console.log(divisibleByThree.length);
+
+// }
+
+// }
+// //function to check if numbers divide by 5
+// function sayFive(currentNumber){
+//  {
+//    if(currentNumber %5 === 0){
+
+//        console.log(currentNumber);
+//        divisibleByFive.push(currentNumber)
+//     //   console.log(divisibleByFive.length);
+//      }
+
+//    }
+
+//  }
+
+// function threeFive(startIndex, stopIndex, threeCallback, fiveCallBack){
+// for( i = startIndex; i<= stopIndex; i++){
+//  const currentNumber = numArray.push(i);
+//  threeCallback(currentNumber);
+//  fiveCallBack(currentNumber);
+
+// console.log(numArray);
+// console.log(divisibleByFive);
+// console.log(divisibleByThree);
+// }};
+
+
+// threeFive(10, 15, sayThree,sayFive);

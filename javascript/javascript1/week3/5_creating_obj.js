@@ -88,7 +88,7 @@ bookList();
 
 //new object with book covers
 let booksImage = {
-    "romeo_and_juliet": "./images/Romeo and Juliet.jpeg",
+    romeo_and_juliet: "./images/Romeo and Juliet.jpeg",
     "war_and_peace":"images/war_and_peace.jpg",
     "don_quixote":"images/don_quixote.jpg",
     "hamlet":"images/hamlet.jpg",
