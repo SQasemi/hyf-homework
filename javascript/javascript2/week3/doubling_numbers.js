@@ -19,10 +19,21 @@ let newNumbers = [];
 // });
 
 //with filter
-function doubleOddNumbers (val){
-    if(val % 2 !== 0 ){
-       newNumbers.push(val *2);
+// function doubleOddNumbers (val){
+//     if(val % 2 !== 0 ){
+//        newNumbers.push(val *2);
+//     }
+// } 
+// numbers.filter(doubleOddNumbers);
+// console.log(newNumbers);
+
+//iterating with map
+function doubleOddNumbersWithMap (val){
+     if(val % 2 !== 0 ){
+        newNumbers.push(val *2);
+     }
     }
-} 
-numbers.filter(doubleOddNumbers);
-console.log(newNumbers);
+    numbers.map(doubleOddNumbersWithMap);
+    console.log(newNumbers);
+
+    
