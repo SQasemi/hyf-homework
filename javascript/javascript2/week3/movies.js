@@ -242,14 +242,50 @@ const moview = [{
     "votes": 84993, 
     "running_times": 7500 }, { "title": "A Thousand Words", "year": 2012, "rating": 5.9, "votes": 33739, "running_times": 5460 }, { "title": "A Time to Kill", "year": 1996, "rating": 7.4, "votes": 110362, "running_times": 8940 }, { "title": "A Very Harold & Kumar 3D Christmas", "year": 2011, "rating": 6.3, "votes": 58988, "running_times": 5760 }, { "title": "A View to a Kill", "year": 1985, "rating": 6.3, "votes": 74476, "running_times": 7860 }, { "title": "A Walk Among the Tombstones", "year": 2014, "rating": 6.5, "votes": 96762, "running_times": 6840 }, { "title": "A Walk in the Clouds", "year": 1995, "rating": 6.7, "votes": 26854, "running_times": 6120 }, { "title": "A Walk in the Woods", "year": 2015, "rating": 6.3, "votes": 19128, "running_times": 6240 }, { "title": "A Walk to Remember", "year": 2002, "rating": 7.4, "votes": 176490, "running_times": 6060 }, { "title": "A Wednesday", "year": 2008, "rating": 8.3, "votes": 56214, "running_times": 6240 }, { "title": "A Woman Under the Influence", "year": 1974, "rating": 8.2, "votes": 16018, "running_times": 9300 }, { "title": "A.C.O.D.", "year": 2013, "rating": 5.7, "votes": 11540, "running_times": 5280 }, { "title": "ARQ", "year": 2016, "rating": 6.4, "votes": 22206, "running_times": 5280 }, { "title": "ATM", "year": 2012, "rating": 4.7, "votes": 20365, "running_times": 5400 }, { "title": "AVP: Alien vs. Predator", "year": 2004, "rating": 5.6, "votes": 159110, "running_times": 6540 }, { "title": "AVPR: Aliens vs Predator - Requiem", "year": 2007, "rating": 4.7, "votes": 101047, "running_times": 6120 }];
 
-   //let arr = [];
-    //to count number of movies betwwen two years
+   
+    //1.to count number of movies betwwen two years
     
     let numberOfMovies = moview.filter((val) => {
        let check = (val.year >= '1980' && val.year <= '1989');
        //console.log( arr.push(check)); 
        return check;
     });
-    console.log(numberOfMovies.length);
+    console.log("1: Number of movies which are from 1980 up to 1989 :" + numberOfMovies.length);
 
+ 
+
+
+
+  //2.without creating new array just adding key in array of objects and then check then rating
+  
+  let result = moview.map(function(arr){
+      let obj = Object.assign({}, arr);
+      //obj.tag = '';
+      if(arr.rating >= '7')
+      {
+          obj.tag = 'Good';
+      }
+      if(arr.rating >= 4 && arr.rating < 7)
+      {
+         obj.tag = 'Average'
+      }
+      if(arr.rating < 4 )
+      {
+          obj.tag = 'Bad'
+
+      }
+      return obj;
+  })
+  console.log("2:Adding tag key and chech that by rating number :",result);
+  
+
+
+  //3. filter the movies which rated over 6 
+  let rateOverSix = moview.filter((rate) => {
+  if(rate.rating > 6){
+  return rate;
+  }
+  })
+  
+  console.log("4:Movies that have over 6 rate: ", rateOverSix)
     
