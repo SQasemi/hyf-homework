@@ -66,3 +66,4 @@ window.sendPricesToServer = function(prices, callback) {
         callback(`These prices were received ${prices}`);
     }, 3000)
 }
+
