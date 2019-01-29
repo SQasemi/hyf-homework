@@ -1,0 +1,38 @@
+[{
+    "companyName": "Lenovo",
+    "Make Year": " 2016",
+    "memory": {"Ram": "4GB", "RamType": "DDR4"} ,
+    "colors": ["Black", "white", "blue"],
+    "screenSize": "15,6HD",
+    "price": "4000",
+    "CPU": "Intel",
+    "Camera": "HD720p",
+    "Graphic":{ "Type": "Delt", "GPU": "620"}
+
+},
+{
+    "companyName": "Dell",
+    "Make Year": " 2012",
+    "memory": {"Ram": "4GB", "RamType": "DDR4"} ,
+    "colors": ["Gray", "Black", "white", "blue"],
+    "screenSize": "14,6HD",
+    "price": "3000",
+    "CPU": "Intel",
+    "Camera": "HD720p",
+    "Graphic":{ "Type": "Delt", "GPU": "620"}
+
+},
+{
+    "companyName": "Mac",
+    "Make Year": " 2016",
+    "memory": {"Ram": "4GB"} ,
+    "colors": ["Silver", "Black", "white"],
+    "screenSize": "13,3",
+    "price": "9000"
+   
+
+}
+
+
+
+]
