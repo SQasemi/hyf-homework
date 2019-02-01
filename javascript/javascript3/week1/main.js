@@ -18,13 +18,18 @@
       .then((cities) => {
           //console.log(cities.weather[0]);
           
-          area.innerHTML = ("<h3><strong>Main :</strong>" + cities.weather[0].main + "<br> <strong> Description </strong>" + cities.weather[0].description +"</h3>");
+          area.innerHTML = ("<h5><table><tr><th> City Name: </th><td>"+city+"</td></tr><tr><th>Weather :</th><td>" + cities.weather[0].main + 
+                            "</td></tr><tr><th> Description: </th><td><img src='http://openweathermap.org/img/w/"+ cities.weather[0].icon+".png'/></td><td>" + cities.weather[0].description +
+                            "</td></tr><tr><th> Wind Speed: </th><td>" + cities.wind.speed + 
+                            "</td></tr><tr><th> Wind Degree: </th><td>" + cities.wind.deg + 
+                            "</td></tr><tr><th> Clouds Measure: </th><td>" + cities.clouds.all+ 
+                            "</td></tr><tr><th> Temprature: </th><td>" + cities.main.temp +"</td></tr></table></h5>");
                       
          
      }
          
 
-   
+     
 
    )}});
 
