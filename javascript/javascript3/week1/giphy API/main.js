@@ -14,11 +14,14 @@ subBtn.addEventListener('click', function() {
        // console.log (wordd.data[0].url);
       // console.log(wordd.data[0].images.fixed_height_still.url);
      // console.log(wordd.data[1].images.preview_webp.url);
-     document.getElementById('image').src = wordd.data[1].images.preview_webp.url
+     let img = document.getElementById('image'); 
+     img.src = wordd.data[1].images.preview_webp.url;
+    
+     
      console.log (document.getElementById('image').src = wordd.data[1].images.preview_webp.url);
-       })
+       });
    }
    else{
       alert ("please write something to search box!!!");
    }
-})
+});
