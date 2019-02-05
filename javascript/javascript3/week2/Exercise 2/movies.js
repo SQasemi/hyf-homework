@@ -7,7 +7,12 @@ fetch('https://gist.githubusercontent.com/pankaj28843/08f397fcea7c760a99206bcb0a
      console.log(longMovies);
      longMovieTitles = longMovies.map(movie => movie.title);
      console.log(longMovieTitles);
-     
+     let badMovies = movies.filter(movie => movie.rating < 5);
+     console.log(badMovies);
+     let badMoviesSinceYear2000 = badMovies.filter(movie => movie.year >= 2000);
+     console.log(badMoviesSinceYear2000);
+     let titleBadMoviesSinceYear2000 = badMoviesSinceYear2000.map(movie => movie.title);
+     console.log(titleBadMoviesSinceYear2000);
 
 })
 
