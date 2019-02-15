@@ -65,11 +65,11 @@ console.log(c2)
 c2.draw();
 
 //random
-function randomCircle(){
-    setTimeout(()=>{
 
-    let x = Math.random() * 200;
-    let y = Math.random() * 100;
+    setInterval(()=>{
+
+    let x = Math.random() * 800;
+    let y = Math.random() * 800;
     let r = Math.random() * 20;
     //random color
    
@@ -84,10 +84,6 @@ function randomCircle(){
         c1 = new Circle(x, y, r, 0, 2 * Math.PI, randColor2());
         c1.draw(); 
     
-    },1000)
-}
-    //to loop function
-    for(let c=0 ; c<= 1000 ; c++){
-        randomCircle(c);
-    }
+    },500)
+
 
