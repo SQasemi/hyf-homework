@@ -21,7 +21,13 @@ class ShoppingCart {
     }
 
     getTotal() {
-        this.products.sum(price)
+       // let sum ;
+        // for(let i = 0; i<this.products.length;i++){
+        //     sum = sum + this.products.price[i];
+        // }
+        this.products.reduce((product)=>{
+            product.price;
+        })
     }
 
     renderProducts() {
@@ -52,3 +58,4 @@ shoppingCart.removeProduct(computer);
 console.log(flatscreen);
 console.log(shoppingCart);
 
+console.log(shoppingCart.getTotal());
