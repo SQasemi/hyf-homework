@@ -3,7 +3,7 @@ class Quiz {
         this.name = name;
     }
     fetchQuestion(){
-       return fetch('https://gist.githubusercontent.com/benna100/c9c38faebea1526fb4e6b6b896a1dc94/raw/9468c385bfb422620676b3669509b0a59b326c42/quiz-questions.json')
+       return fetch('https://gist.githubusercontent.com/benna100/13f5850bf78f59d9baea915cbbe9f258/raw/ef8f2b137b07b05e8f593cef0281b4f1f0aba79a/JS-3%2520questions')
         .then((response) => response.json())
         // .then((questions) => {
         //     console.log(questions);
@@ -83,16 +83,18 @@ let quiz = new Quiz("helper");
 console.log(quiz);
 quiz.fetchQuestion()
     .then((questions) => {
-        document.querySelector('.loading').remove();
+        document.querySelector('.loading').innerHTML = "";
         quiz.renderQuestion(questions);
-    })
-    .then(() => {
+  
+    
         let button = document.querySelector('button');
         button.addEventListener('click',() => {
         
        console.log(quiz.getScore()) ;
        let showresultScore = quiz.getScore();
-       quiz.renderScore(showresultScore);
+       //quiz.renderScore(showresultScore);
+       let msg = document.querySelector('p');
+       msg.innerHTML = "You have answered the "+ quiz.getScore() + " of " +questions.length ;
          });
     
         })
