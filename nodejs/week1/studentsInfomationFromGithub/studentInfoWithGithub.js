@@ -1,55 +1,43 @@
-// fetch("students.json")
-// 	.then(response => response.json())
-// 	.then(parsed => {
-//     console.log(parsed)
-//   });
-
-
-
 
 
 class StudentBook {
-    constructor(name, email, classId, phone)
-    {
-        this.name = name;
-        this.email = email;
-        this.classId = classId;
-        this.phone = phone;
-
-    }
-    //method to show list of students
-    getList(){
-        fetch('students.json')
-        .then(response => response.json())
-        .then((data) => {
-            this.data = data;
-            console.log(data);
-
-        })
-       
-    }
-
+  constructor(name, email, classId, phone) {
+    this.studentsInfo = [];
+    this.name = name;
+    this.email = email;
+    this.classId = classId;
+    this.phone = phone;
+  }
+  //method to show list of students
+  getList(){
+    fetch("students.json")
+    .then(response => response.json())
+    .then(data => {
+     console.log(data);
+     this.studentsInfo =(studentsInfo.push(data)) ;
+     return (studentsInfo);
+    
+    });
+  }
+  getListByClass(key,value) {
+    return this.studentsInfo.filter(objStudent=>{
+      if(objStudent.hasOwnProperty(key)){
+        if(objStudent[key].toString().toLowerCase().startsWith(value.toString().toLowerCase())){
+          return objStudent;
+        }
+      }
+      else{
+        throw new Error(`This key ${key} does not exist`);
+      }
+    })
+ 
+  }
 }
 
- 
-  const hyf_students = new StudentBook();
-  //console.log(hyf_students);
-  hyf_students.getList();
+let hyf_students = new StudentBook();
+//console.log(hyf_students);
+hyf_students.getList();
+
+console.log(hyf_students.getListByClass("classId","08"));
 
 
-   
-   
-
-
-
-
-
-// //const studentsInfo = '{"students":}'
-// async function loadJSON (url) {
-//     const res = await fetch(url);
-//     return await res.json();
-//    }
-   
-//    loadJSON('students.json').then(data => {
-//     console.log(data);
-//    });
