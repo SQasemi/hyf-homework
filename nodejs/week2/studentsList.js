@@ -1,6 +1,7 @@
 const studentsJsonList = require('./students.json', 'utf8');
 const fs = require('fs');
-const stdLists = JSON.parse(fs.readFileSync('./students.json', 'utf8'));
+const jsonFileOfStd = fs.readFileSync('./students.json', 'utf8');
+const stdLists = JSON.parse(jsonFileOfStd);
 class StudentBook{    
     
     // get list of students 
@@ -28,20 +29,38 @@ class StudentBook{
         return stdListByName;
     }
     //to add new student into json file
-     addNewStudent(studentInfo){
-         const checkDuplicate = stdLists.find((std) => {
-           return  std.name == studentInfo.name;
-         })
-       if(checkDuplicate === undefined ){
-        stdLists.push(studentInfo);
-       }
+     addNewStudent(studentsInfo){
+          const checkDuplicateStudent = stdLists.find((std) => {
+              std.name == studentsInfo;
+        
+              })
+              if(checkDuplicateStudent == undefined)
+                stdLists.push(studentsInfo);
+              fs.writeFile("students.json", JSON.stringify(stdLists, null, 4),(err) => {
+                console.log(err)
+            });
+      return (studentsInfo) 
       
-       
-     }
+       }
 
-    // eidtStudent(editStd = name){
-
-    // }
+    //to edit student 
+      eidtStudent(toBeEdited, newValue) {
+        const objIndexStd = studentsJsonList.findIndex(
+          obj => obj.name === toBeEdited.name
+        );
+        if (objIndexStd >= 0) {
+          let updateValue = { ...studentsJsonList[objIndexStd], ...newValue };
+          studentsJsonList[objIndexStd] = updateValue;
+          console.log(studentsJsonList[objIndexStd]);
+          fs.writeFileSync("students.json",JSON.stringify(studentsJsonList, null, 4),
+            err => {
+              console.log(err);
+            }
+          );
+        } else {
+          console.log("Student not found in list !!!");
+        }
+      }
 }
 
 module.exports= StudentBook;

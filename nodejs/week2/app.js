@@ -18,10 +18,13 @@ const StudentBook = require('./studentsList')
         res.end(JSON.stringify(hyfStudents.getListDetailByName('Sheila')));
     }
     else if(url == '/addNewStudent'){
-        res.end(JSON.stringify(hyfStudents.addNewStudent('Sheila')));
+        res.end(JSON.stringify(hyfStudents.addNewStudent({"name": "Hafiz", "classId":"09", "email":"h@hotmail.com", "phone":"886655"})));
+    }
+    else if(url == '/editStudent'){
+        res.end(JSON.stringify(hyfStudents.eidtStudent({"name":"mono"},{"name":"Ali", "classId":"07"})));
     }
    
-}).listen(8000);
+}).listen(8880);
 console.log("server is loading");
 //console.log(studentBook);
 
