@@ -41,8 +41,46 @@ const server = http.createServer((req, res) => {
             res.statusCode = 200 ;
             res.end(JSON.stringify(getStdDetailsByName));
         }
+    }
 
-       // res.end(JSON.stringify(hyfStudentsBook.getStudentDetailsByName('Sheila')))
+    //to add new student
+    else if(url == '/addNewStudent' && req.method == 'POST'){
+        const addNewStd = hyfStudentsBook.addStudent({
+            "name": "jam", "classId":"09", "email":"h@hotmail.com", "phone":"886655"
+        });
+        if (addNewStd) {
+            res.statusCode = 201;
+            res.end ("Student added successfully")
+
+        } else {
+            res.statusCode = 404;
+            res.end('Failed')
+        }}
+
+    //to edit student
+    else if (url == '/editStudent' && req.method == 'PUT'){
+        const editStd = hyfStudentsBook.eidtStudent({"name":"jam"},{"name":"Ali", "classId":"07"});
+        if (editStd) {
+            res.statusCode = 201;
+            res.end ("Student edited successfully")
+
+        } else {
+            res.statusCode = 404;
+            res.end('Failed')
+        }
+    }
+
+    //to delete student
+    else if( url == '/deleteStudent' && req.method == 'DELETE'){
+        const deleteStd = hyfStudentsBook.deleteStudent('Hafiz');
+        if (deleteStd) {
+            res.statusCode = 201;
+            res.end ("Student deleted successfully")
+
+        } else {
+            res.statusCode = 404;
+            res.end('Failed')
+        }
     }
 
 }).listen(8300);
