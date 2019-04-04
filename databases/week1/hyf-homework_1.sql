@@ -52,3 +52,8 @@ select name from status where
 (select count(*) from task join status
 on status.id = task.status_id);
  
+ #10. Get the names of all statuses, sorted by the status with most tasks first
+select status.name as statusList
+from status join task on status.id = task.status_id
+group by status.id
+order by statusList desc ;
