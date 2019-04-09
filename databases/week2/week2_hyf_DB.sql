@@ -49,3 +49,34 @@ insert into student_course (Std_id, course_id) values (3, 3);
 insert into student_course (Std_id, course_id) values (4, 2);
 
 
+#remove one column from one of the tables
+# removing phone from student table
+alter table student drop phone;
+
+#change the data type for one column in one of the tables
+#change duration in course table
+alter table course modify duration varchar(66);
+
+#add a new column to one of the tables with a default value.
+# adding last name into student 
+alter table student add last_name varchar(100) default 'test last name';
+
+#modify two entries (rows) in one of the tables
+update student set last_name = 'qasemi' 
+	where name = 'sheila';
+update student set name = 'new' 
+	where Std_id = 3;
+    
+#delete two entries in one of the tables
+delete from student
+	where name = 'jan' or name = 'khan';
+    
+    
+#add an index to one of the columns in one of the tables
+create index listStudentIndex on student (name);
+    
+    
+	
+
+
+
