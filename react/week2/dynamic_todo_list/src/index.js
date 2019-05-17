@@ -6,13 +6,21 @@ import List from "./List";
 
 //import * as serviceWorker from './serviceWorker';
 class App extends React.Component {
+  state = {
+    items: ["pen", "book", "pencil"]
+  };
+
+  addNewItems = newVal => {
+    const newVlaues = this.state.items.concat(newVal);
+    this.setState({ items: newVlaues });
+  };
   render() {
-    const listOfItems = ["pen", "book"];
+    const { items } = this.state;
     return (
       <div>
         <h3>Dynamic to do list </h3>
-        <Header />
-        <List items={listOfItems} />
+        <Header clickhandler={this.addNewItems} />
+        <List items={items} />
       </div>
     );
   }
